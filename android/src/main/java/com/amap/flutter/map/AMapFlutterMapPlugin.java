@@ -1,6 +1,6 @@
 package com.amap.flutter.map;
 
-import androidx.annotation.NonNull;
+
 import androidx.lifecycle.Lifecycle;
 
 import com.amap.flutter.map.utils.LogUtil;
@@ -27,7 +27,7 @@ public class AMapFlutterMapPlugin implements
     // FlutterPlugin
 
     @Override
-    public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
+    public void onAttachedToEngine(FlutterPluginBinding binding) {
         LogUtil.i(CLASS_NAME, "onAttachedToEngine==>");
         PlatformViewRegistry registry = binding.getPlatformViewRegistry();
         registry.registerViewFactory(
@@ -37,7 +37,7 @@ public class AMapFlutterMapPlugin implements
     }
 
     @Override
-    public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+    public void onDetachedFromEngine( FlutterPluginBinding binding) {
         LogUtil.i(CLASS_NAME, "onDetachedFromEngine==>");
     }
 
@@ -45,7 +45,7 @@ public class AMapFlutterMapPlugin implements
     // ActivityAware
 
     @Override
-    public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
+    public void onAttachedToActivity(ActivityPluginBinding binding) {
         LogUtil.i(CLASS_NAME, "onAttachedToActivity==>");
         lifecycle = FlutterLifecycleAdapter.getActivityLifecycle(binding);
     }
@@ -57,7 +57,7 @@ public class AMapFlutterMapPlugin implements
     }
 
     @Override
-    public void onReattachedToActivityForConfigChanges(@NonNull ActivityPluginBinding binding) {
+    public void onReattachedToActivityForConfigChanges( ActivityPluginBinding binding) {
         LogUtil.i(CLASS_NAME, "onReattachedToActivityForConfigChanges==>");
         onAttachedToActivity(binding);
     }
